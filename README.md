@@ -7,7 +7,8 @@ Programming Hero.
 
 ## 🚀 Live Demo
 
-[ dp link]
+https://fitlog-by-shakir.netlify.app/
+
 
 ## 🛠️ Technologies Used
 
