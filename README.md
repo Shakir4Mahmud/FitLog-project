@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FitLog — Workout Library
 
-## Getting Started
+FitLog is a dark-themed workout tracking web app where users can browse a
+library of workouts, view detailed instructions for each exercise, build a
+daily workout plan, and save workouts for later. Built as Assignment 6 for
+Programming Hero.
 
-First, run the development server:
+## 🚀 Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[ dp link]
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Technologies Used
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Next.js** (App Router) — routing and UI
+- **React** (Context API) — global state management for Plan/Saved data
+- **Tailwind CSS** — styling and responsive layout
+- **Browser localStorage** — persisting plan/saved data across reloads
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Key Features
 
-## Learn More
+1. **Dynamic Workout Library** — Fetches all 12 workouts from a live API and
+   displays them as responsive cards in a 3x4 grid, each showing category
+   tags, equipment, duration, calories, and rating.
+2. **Workout Details Page** — Dynamic route (`/workouts/[id]`) showing a
+   full breakdown of each workout including key specs and step-by-step
+   instructions.
+3. **Today's Plan & Saved Lists** — Add workouts to today's plan or save
+   them for later, with live-updating badge counters in the navbar.
+4. **Sort & Track Progress** — Sort the plan/saved list by Duration,
+   Calories, or Rating, mark workouts as done, and remove items — with
+   live metrics for total exercises, minutes, and calories.
+5. **Persistent Data & Toast Notifications** — Plan/Saved data is saved to
+   localStorage so it survives a page reload, and every action shows an
+   animated toast notification for clear feedback.
 
-To learn more about Next.js, take a look at the following resources:
+## 📱 Responsive Design
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Fully responsive across mobile, tablet, and desktop — including a
+collapsible hamburger menu for the navbar on small screens.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📂 Project Structure
 
-## Deploy on Vercel
+src
+├── app
+│ ├── page.js # Home page (Hero + Library)
+│ ├── layout.js # Root layout (Navbar, Footer, Providers)
+│ ├── not-found.js # 404 page
+│ ├── workouts/[id]/ # Workout details page
+│ └── my-plan/ # My Plan page
+├── components/ # Reusable UI components
+└── context/ # Global state (WorkoutContext)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔌 API Used
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- All workouts: `https://api.abcz.workers.dev/api/fitlog`
+- Single workout: `https://api.abcz.workers.dev/api/fitlog/:id`
