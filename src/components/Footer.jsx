@@ -11,7 +11,8 @@ export default function Footer() {
             FITLOG
           </span>
         </Link>
-
+        
+{/* Text */}
         <p className="text-sm text-gray-400">
           © 2026 FitLog — Workout Library. Train hard, log honest.
         </p>
