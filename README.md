@@ -38,17 +38,6 @@ Programming Hero.
 Fully responsive across mobile, tablet, and desktop — including a
 collapsible hamburger menu for the navbar on small screens.
 
-## 📂 Project Structure
-
-src
-├── app
-│ ├── page.js # Home page (Hero + Library)
-│ ├── layout.js # Root layout (Navbar, Footer, Providers)
-│ ├── not-found.js # 404 page
-│ ├── workouts/[id]/ # Workout details page
-│ └── my-plan/ # My Plan page
-├── components/ # Reusable UI components
-└── context/ # Global state (WorkoutContext)
 
 ## 🔌 API Used
 
