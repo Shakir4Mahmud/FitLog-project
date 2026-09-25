@@ -29,7 +29,7 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Img */}
+        {/* Image */}
         <div className="hidden md:block md:w-[42%]">
           <Image
             src="/banner.png"
