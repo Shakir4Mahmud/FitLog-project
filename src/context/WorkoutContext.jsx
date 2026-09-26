@@ -85,16 +85,11 @@ export function WorkoutProvider({ children }) {
     showToast("Removed from saved", "error");
   }
 
-  function markAsDone(id) {
-    const updatedPlan = todayPlan.map((item) => {
-      if (item.id === id) {
-        return { ...item, done: true };
-      }
-      return item;
-    });
-    setTodayPlan(updatedPlan);
-    showToast("Marked as done", "success");
-  }
+function markAsDone(id) {
+  const updatedPlan = todayPlan.filter((item) => item.id !== id);
+  setTodayPlan(updatedPlan);
+  showToast("Marked as done", "success");
+}
 
   const value = {
     todayPlan,

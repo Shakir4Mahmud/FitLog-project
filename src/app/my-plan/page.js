@@ -24,7 +24,7 @@ function MyPlanContent() {
     return () => clearTimeout(timer);
   }, [searchParams]);
 
-  const activePlan = todayPlan.filter((item) => !item.done);
+const activePlan = todayPlan;
 
   const totalMinutes = activePlan.reduce((sum, item) => sum + item.duration, 0);
   const totalCalories = activePlan.reduce(
